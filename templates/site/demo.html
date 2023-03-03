@@ -1,0 +1,12 @@
+{% include 'site/header.html' %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Graficas de muestra con datos aleatorios</h1>
+  <hr class="my-4">
+     {{ graph_html2|safe }}
+  <hr class="my-4">
+     {{ graph_html1|safe }}
+
+</div>
+
+{% include 'site/footer.html' %}

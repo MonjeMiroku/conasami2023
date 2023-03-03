@@ -1,0 +1,38 @@
+{% include 'site/header.html' %}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card  p-2">
+        <form method="POST">
+  <div class="form-group">
+    <label for="table">Selecciona una grafica:</label>
+    <select class="form-control" name="table" id="table">
+         <option value="none" name="none" >selecciona una opcion</option>
+  <option value="sm_hist" name="sm_hist" >Salario Mínimo Histórico</option>
+  <option value="sbc_zona" name="sbc_zona">Evolución del Salario mínimo general</option>
+  <option value="smg18_actual" name="smg18_actual">Canasta básica urbana cubierta por el salario mínimo</option>
+</select>
+
+  </div>
+
+</form>
+            </div>
+        <div class="card m-4">
+        {{ graph_html|safe }}
+            </div>
+    </div>
+<div class=" col-md-6">
+            <div class="card p-4">
+            <div  style="height: 50vh; overflow-y: scroll;">
+
+          {{ table_html|safe }}
+            </div>
+          </div>
+
+  </div>
+
+
+
+  </div>
+
+{% include 'site/footer.html' %}
